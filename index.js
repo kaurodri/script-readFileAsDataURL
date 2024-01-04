@@ -5,7 +5,7 @@ function base(filePath) {
     try {
         const data = fs.readFileSync(filePath);
         const base64Data = data.toString('base64');
-        const mimeType = 'application/octet-stream'; // defina o tipo MIME apropriado
+        const mimeType = 'application/pdf';
         const dataURL = `data:${mimeType};base64,${base64Data}`;
         return dataURL;
     } catch (error) {
